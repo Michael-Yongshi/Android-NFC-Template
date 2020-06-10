@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yongshi42.android_nfc_template">
 
+    <!-- Add permission to use nfc -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- register that internet is used by this app -->
+    <uses-permission android:name="android.permission.NFC" /> <!-- register that nfc is used AND mandatory in the play store -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
